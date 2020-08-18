@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Jun&#39;Bolg</title>
+  
+  <subtitle>记录我的热爱</subtitle>
+  <link href="http://yoursite.com/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2020-08-16T05:45:02.000Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Jun</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MiniMatx机箱折腾日记</title>
+    <link href="http://yoursite.com/2020/08/16/MiniMatx%E6%9C%BA%E7%AE%B1%E6%8A%98%E8%85%BE%E6%97%A5%E8%AE%B0/"/>
+    <id>http://yoursite.com/2020/08/16/MiniMatx%E6%9C%BA%E7%AE%B1%E6%8A%98%E8%85%BE%E6%97%A5%E8%AE%B0/</id>
+    <published>2020-08-16T05:45:02.000Z</published>
+    <updated>2020-08-16T05:45:02.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Mini-Matx机箱折腾日记"><a href="#Mini-Matx机箱折腾日记" class="headerlink" title="Mini Matx机箱折腾日记"></a>Mini Matx机箱折腾日记</h1><h2 id="配置介绍"><a href="#配置介绍" class="headerlink" title="配置介绍"></a>配置介绍</h2><h3 id="目前配置"><a href="#目前配置" class="headerlink" title="目前配置"></a>目前配置</h3><p>去年花光了我全部的积蓄在宿舍组装了一台主机，配置如下</p><table><thead><tr><th align="center">配件</th><th align="center">型号</th><th align="center">价格</th></tr></thead><tbody><tr><td align="center">CPU</td><td align="center">Ryzen 3700x</td><td align="center">2175</td></tr><tr><td align="center">主板</td><td align="center">MSI B450M Mortar MAX</td><td align="center">599</td></tr><tr><td align="center">显卡</td><td align="center">盈通 RX590 游戏高手</td><td align="center">1199</td></tr><tr><td align="center">内存</td><td align="center">CRUCIAL 8G DDR4 3000MHz x4 (C9BJZ颗粒)</td><td align="center">958</td></tr><tr><td align="center">固态</td><td align="center">海康C2000Pro 1T</td><td align="center">799</td></tr><tr><td align="center">机箱</td><td align="center">迎广303</td><td align="center">394</td></tr><tr><td align="center">电源</td><td align="center">海韵Focus GX750</td><td align="center">647</td></tr><tr><td align="center">风扇</td><td align="center">乔思伯日食风扇x4</td><td align="center">128</td></tr></tbody></table><p>总价竟然高达6899，这… 6899是我真的没有想到的，这也是我第一次详细的算这帐，这些配件是我陆陆续续买的，刚开始的预算只有五千多一点，内存只插了两根，风扇也没上。结果后来各方面都觉得差点啥，最后加到了近七千。我哭了，我终于知道我的钱都去哪了/</p><p>再说一下这套配置，我刚开始是想着偏学习方向的，所以在显卡方面就降低了一些预算，把省下来的预算放到了CPU上,其他的配件都是使用的中高端的产品，电源是十年质保的，用到我换下下一台电脑肯定是没问题的。固态在现在看来是买亏了，现在日常699。其他方面目前来看还没有贬值太多。不过既然都组好了，就好好用就行了，越关注用着越糟心。</p><h3 id="折腾原因"><a href="#折腾原因" class="headerlink" title="折腾原因"></a>折腾原因</h3><p>然后是今天的主题，在将电脑从学校搬回家的过程中，我深深的被迎广303感动到了。辣是真重，整个机箱是使用3.5mm的钢板制成，光机箱净重就有10.88kg，加上里面的个种配件，整套估计有将近40kg重，体积方面也是也是感人501x215x490mm，我最大的行李箱完全塞不下这个大家伙。想到不久之后我又要开学了，我就是一个哆嗦，不行，得想办法把这机箱给换了。</p><h3 id="折腾方案"><a href="#折腾方案" class="headerlink" title="折腾方案"></a>折腾方案</h3><p>在我一番了解下，我只有两个选择，一个是上itx机箱，一个是换matx机箱。ITX机箱非常mini，很多都能塞进背包里带走，但是代价就是需要更换ITX主板和SFX电源，更换这两个配件价格起码得1200+，这对于在家宅了8个月的我来说是一笔巨款，果断放弃。退而求其次，选择matx机箱可能是个不错的选择，其实在matx和itx中间还有一种机箱，比itx机箱大一点点，比matx小一点点，可以使用matx主板但是电源还是需要使用sfx电源，这样可以将预算压低到600+（不含机箱），但这对我来说还是有点不能接受。最终我找到了一款非常mini的matx机箱，可能是目前市场上最小的可以满足我的审美的matx机箱了，价格299，比大部分itx机箱要便宜。我是搭配了as120mini一起买的，活动价格199，但是as120mini需要199就比较贵了，两者平均一下还行。</p><p>同时这种小机箱都有一些共同的问题，因为没有背板和机箱空间有限，所以走线难度会比较大，散热也十分捉急。作为一名电气专业的<code>带专生</code>，走线在我<del>强大的动手能力</del>和<del>专业知识</del>面前还不是小问题，散热不行辣就使劲塞风扇就完事了。</p><p>这种机箱一般大家都会去淘宝买定制线去走线，但是一套质量可以的定制往往需要300元以上，这我能忍？买材料自己做才是王道。于是我去淘宝找了一些符合我要求的材料。质量方面肯定是能干翻大部分淘宝货，</p><p>###机箱简介</p><p>机箱尺寸：<code>345x158x264mm</code> 容积：<code>14.6L</code> 可以支持标准的Matx主板+atx电源</p><h2 id=""><a href="#" class="headerlink" title=""></a></h2>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Mini-Matx机箱折腾日记&quot;&gt;&lt;a href=&quot;#Mini-Matx机箱折腾日记&quot; class=&quot;headerlink&quot; title=&quot;Mini Matx机箱折腾日记&quot;&gt;&lt;/a&gt;Mini Matx机箱折腾日记&lt;/h1&gt;&lt;h2 id=&quot;配置介绍&quot;&gt;&lt;a href</summary>
+      
+    
+    
+    
+    <category term="技术" scheme="http://yoursite.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="硬件" scheme="http://yoursite.com/tags/%E7%A1%AC%E4%BB%B6/"/>
+    
+    <category term="DIY" scheme="http://yoursite.com/tags/DIY/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Markdown学习笔记</title>
+    <link href="http://yoursite.com/2020/08/15/Markdown%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://yoursite.com/2020/08/15/Markdown%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
+    <published>2020-08-14T18:05:02.000Z</published>
+    <updated>2020-08-14T18:05:02.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Markdown学习笔记"><a href="#Markdown学习笔记" class="headerlink" title="Markdown学习笔记"></a>Markdown学习笔记</h1><h2 id="标题语法"><a href="#标题语法" class="headerlink" title="标题语法"></a>标题语法</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//标题语法</span></span><br><span class="line"># 一级标题C</span><br><span class="line">## 二级标题</span><br><span class="line">### 三级标题</span><br><span class="line">#### 四级标题</span><br><span class="line">##### 五级标题</span><br><span class="line">###### 六级标题</span><br></pre></td></tr></table></figure><hr><h2 id="代码引用"><a href="#代码引用" class="headerlink" title="代码引用"></a>代码引用</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//代码引用</span></span><br><span class="line">/段落引用  ```C     *使用<span class="number">3</span>个飘号+代码类型开始</span><br><span class="line">/         code</span><br><span class="line">/段落引用  ```      *<span class="number">3</span>个飘号结束</span><br><span class="line">/行内代码  `code`</span><br></pre></td></tr></table></figure><p>示例：执行命令<code>npm install</code>等待完成</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//C语言案例</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">( )</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">   <span class="keyword">char</span> str[<span class="number">100</span>];</span><br><span class="line">   <span class="keyword">int</span> i;</span><br><span class="line"> </span><br><span class="line">   <span class="built_in">printf</span>( <span class="string">&quot;Enter a value :&quot;</span>);</span><br><span class="line">   <span class="built_in">scanf</span>(<span class="string">&quot;%s %d&quot;</span>, str, &amp;i);</span><br><span class="line"> </span><br><span class="line">   <span class="built_in">printf</span>( <span class="string">&quot;\nYou entered: %s %d &quot;</span>, str, i);</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">   <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><hr><h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">加粗      ** *        Ctrl+B</span><br><span class="line">高亮      == ==     </span><br><span class="line">删除线    ~~ ~~       Alt+S       /  &lt;s&gt;删除线（开启识别HTML标签时）&lt;/s&gt;</span><br><span class="line">斜体      *   *       Ctrl+I</span><br><span class="line">粗斜体    ***  ***</span><br><span class="line">空格      &amp;ensp;</span><br><span class="line">上标      O&lt;sup&gt;2&lt;/sup&gt;</span><br><span class="line">下标      X&lt;sub&gt;2&lt;/sub&gt;</span><br></pre></td></tr></table></figure><p>示例： &ensp;&ensp;&ensp; <strong>加粗</strong> &ensp;&ensp;&ensp;&ensp; ==高亮== &ensp;&ensp;&ensp;&ensp; <del>删除线</del> &ensp;&ensp;&ensp;&ensp; <em>斜体</em> &ensp;&ensp;&ensp;&ensp; <strong><em>粗斜体</em></strong> &ensp;&ensp;&ensp;&ensp; O<sup>2</sup> &ensp;&ensp;&ensp;&ensp; X<sub>2</sub></p><hr><h2 id="引用文本"><a href="#引用文本" class="headerlink" title="引用文本"></a>引用文本</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;       一级引用</span><br><span class="line">&gt;&gt;      二级引用...</span><br><span class="line">&gt; 混合引用:如果想要插入空白换行`即&lt;br /&gt;标签`，在插入处先键入两个以上的空格然后回车即可，[普通链接](https:<span class="comment">//www.mdeditor.com/)</span></span><br></pre></td></tr></table></figure><blockquote><p>引用1<br>引用2</p><blockquote><p>引用1-2</p></blockquote></blockquote><blockquote><p>混合引用:如果想要插入空白换行<code>即&lt;br /&gt;标签</code>，在插入处先键入两个以上的空格然后回车即可，<a href="https://www.mdeditor.com/">普通链接</a></p></blockquote><hr><h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//分割线1     ---</span></span><br><span class="line"><span class="comment">//分割线2     ***</span></span><br></pre></td></tr></table></figure><hr><h2 id="锚点和连接"><a href="#锚点和连接" class="headerlink" title="锚点和连接"></a>锚点和连接</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[普通链接](https:<span class="comment">//junsmile.cc/)</span></span><br><span class="line">[普通链接带标题](https:<span class="comment">//junsmile.cc/ &quot;普通链接带标题&quot;)</span></span><br><span class="line">直接链接：&lt;https:<span class="comment">//junsmile.cc&gt;</span></span><br><span class="line">[锚点链接][anchor-id]</span><br></pre></td></tr></table></figure><p>示例: <a href="https://junsmile.cc/">普通链接</a> &ensp;&ensp; <a href="https://junsmile.cc/" title="普通链接带标题">普通链接带标题</a> &ensp;&ensp; 直接链接:<a href="https://junsmile.cc/">https://junsmile.cc</a> &ensp;&ensp; [锚点链接][anchor-id]</p><hr><h2 id="图片插入"><a href="#图片插入" class="headerlink" title="图片插入"></a>图片插入</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//在线OR本地图片引用</span></span><br><span class="line">![图片名](/image/<span class="number">2333.</span>jpg)</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>示例：<br><img src= "/img/loading.gif" data-lazy-src="https://pandao.github.io/editor.md/images/logos/editormd-logo-180x180.png" alt="Markdown"></p><hr><h2 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[我的BolG](https:<span class="comment">//junsmile.cc)</span></span><br></pre></td></tr></table></figure><p>实例：访问我的 <a href="https://junsmile.cc/">BolG</a></p><hr><h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//在安装有Markdown All in one插件下TAB键可以直接缩进</span></span><br><span class="line">无序列表     - ltem1</span><br><span class="line">有序列表     <span class="number">1.</span> ltem1  </span><br><span class="line">任务标记     - [x] 任务<span class="number">1</span></span><br><span class="line">                - [ ] 任务<span class="number">1</span><span class="number">-1</span></span><br><span class="line">            - [ ] 任务<span class="number">2</span></span><br><span class="line">                - [ ] 任务<span class="number">2</span><span class="number">-1</span></span><br></pre></td></tr></table></figure><p>实例：</p><ul><li>ltem1<ul><li>ltem2</li></ul></li><li>ltem3</li></ul><ol><li>ltem1</li><li>ltem2<ol><li>ltem2-1</li><li>ltem2-2</li></ol></li></ol><ul><li><input checked="" disabled="" type="checkbox"> 任务1<ul><li><input checked="" disabled="" type="checkbox"> 任务1-1</li></ul></li><li><input disabled="" type="checkbox"> 任务2<ul><li><input disabled="" type="checkbox"> 任务2-1</li></ul></li></ul><hr><h2 id="表格绘制"><a href="#表格绘制" class="headerlink" title="表格绘制"></a>表格绘制</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">格式一:</span><br><span class="line">First Header  | Second Header</span><br><span class="line">------------- | :-------------</span><br><span class="line">Content Cell  | Content Cell</span><br><span class="line">Content Cell  | Content Cell</span><br><span class="line">格式二:</span><br><span class="line">| Function name   | Description                     |</span><br><span class="line">| :-------------: | ------------------------------: |</span><br><span class="line">| `help()`        | Display the help window.        |</span><br><span class="line">| `destroy()`     | **Destroy your computer!**      |</span><br></pre></td></tr></table></figure><p>示例：<br>First Header  | Second Header<br>————- | :————-<br>Content Cell  | Content Cell<br>Content Cell  | Content Cell</p><table><thead><tr><th align="center">Function name</th><th align="right">Description</th></tr></thead><tbody><tr><td align="center"><code>help()</code></td><td align="right">Display the help window.</td></tr><tr><td align="center"><code>destroy()</code></td><td align="right"><strong>Destroy your computer!</strong></td></tr></tbody></table><hr><h2 id="特殊符号"><a href="#特殊符号" class="headerlink" title="特殊符号"></a>特殊符号</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&amp;copy; &amp;  &amp;uml; &amp;trade; &amp;iexcl; &amp;pound;</span><br><span class="line"></span><br><span class="line">&amp;amp; &amp;lt; &amp;gt; &amp;yen; &amp;euro; &amp;reg; &amp;plusmn; &amp;para; &amp;sect; &amp;brvbar; &amp;macr; &amp;laquo; &amp;middot;</span><br><span class="line"></span><br><span class="line">X&amp;sup2; Y&amp;sup3; &amp;frac34; &amp;frac14;  &amp;times;  &amp;divide;   &amp;raquo;</span><br><span class="line"></span><br><span class="line"><span class="number">18</span>&amp;ordm;C  &amp;quot;  &amp;apos;</span><br></pre></td></tr></table></figure><p>示例：<br>&copy; &amp;  &uml; &trade; &iexcl; &pound;</p><p>&amp; &lt; &gt; &yen; &euro; &reg; &plusmn; &para; &sect; &brvbar; &macr; &laquo; &middot;</p><p>X&sup2; Y&sup3; &frac34; &frac14;  &times;  &divide;   &raquo;</p><p>18&ordm;C  &quot;  &apos;</p><hr><h2 id="科学公式"><a href="#科学公式" class="headerlink" title="科学公式"></a>科学公式</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$$E=mc^<span class="number">2</span>$$</span><br></pre></td></tr></table></figure><p>示例：$$E=mc^2$$</p><hr><h2 id="流程图"><a href="#流程图" class="headerlink" title="流程图"></a>流程图</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">/     ```flow</span><br><span class="line">/     st=&gt;start: 用户登陆</span><br><span class="line">/     op=&gt;operation: 登陆操作</span><br><span class="line">/     cond=&gt;condition: 登陆成功 Yes <span class="keyword">or</span> No?</span><br><span class="line">/     e=&gt;end: 进入后台</span><br><span class="line"></span><br><span class="line">/     st-&gt;op-&gt;cond</span><br><span class="line">/     cond(yes)-&gt;e</span><br><span class="line">/     cond(no)-&gt;op</span><br><span class="line">/     ```</span><br></pre></td></tr></table></figure><p>示例：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">st&#x3D;&gt;start: 用户登陆</span><br><span class="line">op&#x3D;&gt;operation: 登陆操作</span><br><span class="line">cond&#x3D;&gt;condition: 登陆成功 Yes or No?</span><br><span class="line">e&#x3D;&gt;end: 进入后台</span><br><span class="line"></span><br><span class="line">st-&gt;op-&gt;cond</span><br><span class="line">cond(yes)-&gt;e</span><br><span class="line">cond(no)-&gt;op</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Markdown学习笔记&quot;&gt;&lt;a href=&quot;#Markdown学习笔记&quot; class=&quot;headerlink&quot; title=&quot;Markdown学习笔记&quot;&gt;&lt;/a&gt;Markdown学习笔记&lt;/h1&gt;&lt;h2 id=&quot;标题语法&quot;&gt;&lt;a href=&quot;#标题语法&quot; cla</summary>
+      
+    
+    
+    
+    <category term="技术" scheme="http://yoursite.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="Markdown" scheme="http://yoursite.com/tags/Markdown/"/>
+    
+    <category term="写作" scheme="http://yoursite.com/tags/%E5%86%99%E4%BD%9C/"/>
+    
+    <category term="工具" scheme="http://yoursite.com/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>平安夜碎碎念</title>
+    <link href="http://yoursite.com/2019/12/24/%E5%B9%B3%E5%AE%89%E5%A4%9C/"/>
+    <id>http://yoursite.com/2019/12/24/%E5%B9%B3%E5%AE%89%E5%A4%9C/</id>
+    <published>2019-12-24T15:18:01.000Z</published>
+    <updated>2019-12-24T15:18:01.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>这是当时平安夜时准备写的东西，但是因为懒，没写完。现在已经忘记要写啥了，嘿嘿————</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;这是当时平安夜时准备写的东西，但是因为懒，没写完。现在已经忘记要写啥了，嘿嘿————&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="碎碎念" scheme="http://yoursite.com/categories/%E7%A2%8E%E7%A2%8E%E5%BF%B5/"/>
+    
+    
+    <category term="感想" scheme="http://yoursite.com/tags/%E6%84%9F%E6%83%B3/"/>
+    
+    <category term="废话" scheme="http://yoursite.com/tags/%E5%BA%9F%E8%AF%9D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Jun&#39;BolG它又双叒来了</title>
+    <link href="http://yoursite.com/2019/12/22/Jun&#39;BolG%E5%AE%83%E5%8F%88%E5%8F%8C%E5%8F%92%E6%9D%A5%E4%BA%86/"/>
+    <id>http://yoursite.com/2019/12/22/Jun&#39;BolG%E5%AE%83%E5%8F%88%E5%8F%8C%E5%8F%92%E6%9D%A5%E4%BA%86/</id>
+    <published>2019-12-22T14:16:01.000Z</published>
+    <updated>2019-12-22T14:16:01.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>又双叒叕搭建博客啦！每次弄好就是放着吃灰，太懒了，大概是没救了吧。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;又双叒叕搭建博客啦！每次弄好就是放着吃灰，太懒了，大概是没救了吧。&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="碎碎念" scheme="http://yoursite.com/categories/%E7%A2%8E%E7%A2%8E%E5%BF%B5/"/>
+    
+    
+    <category term="感想" scheme="http://yoursite.com/tags/%E6%84%9F%E6%83%B3/"/>
+    
+    <category term="废话" scheme="http://yoursite.com/tags/%E5%BA%9F%E8%AF%9D/"/>
+    
+  </entry>
+  
+</feed>
