@@ -6,7 +6,7 @@
   <link href="https://junsmile.cc/atom.xml" rel="self"/>
   
   <link href="https://junsmile.cc/"/>
-  <updated>2020-08-23T02:43:00.000Z</updated>
+  <updated>2021-03-20T14:38:10.370Z</updated>
   <id>https://junsmile.cc/</id>
   
   <author>
@@ -17,13 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>考研记录</title>
+    <link href="https://junsmile.cc/posts/14359/"/>
+    <id>https://junsmile.cc/posts/14359/</id>
+    <published>2021-03-19T16:00:00.000Z</published>
+    <updated>2021-03-20T14:38:10.370Z</updated>
+    
+    
+    <summary type="html">考研不是无间道,而且开往春天的地铁!我向往体验《萌菌物语》中的生活，那就努力去争取吧。</summary>
+    
+    
+    
+    <category term="技术" scheme="https://junsmile.cc/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="考研" scheme="https://junsmile.cc/tags/%E8%80%83%E7%A0%94/"/>
+    
+    <category term="记录" scheme="https://junsmile.cc/tags/%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Kindle的食用方法</title>
     <link href="https://junsmile.cc/posts/5508/"/>
     <id>https://junsmile.cc/posts/5508/</id>
     <published>2020-08-23T02:43:00.000Z</published>
     <updated>2020-08-23T02:43:00.000Z</updated>
     
-    <content type="html"><![CDATA[<p>#概述<br>今年三月份在拼多多上680左右购买了一台日版kindle paperwhite 4 8G，距离如今也已经有快5个月了，很庆幸还没有沦为泡面盖。在这里也顺便记录一下我食用kindle的一些方法。</p><p>#食用方法<br>kindle在我身边的定位不仅仅是一本电纸书，不然在我这儿早就吃灰了。虽然开始是抱着充实自己让自己多看书的幻想入手的，但是人终极还是敌不过懒惰，于是我就让其发挥起娱乐的作用：</p><ol><li>电纸书</li><li>漫画阅读器</li><li>RSS阅读器</li></ol><p>看上去这些功能好像都是电子阅读器最基本的功能了，有啥特殊的？<br>确实，这些功能单独使用起来都是很麻烦的，但是搭配以下的姿势就方便和强大的多了。</p><h2 id="看漫画"><a href="#看漫画" class="headerlink" title="看漫画"></a>看漫画</h2><p>看漫画最麻烦的就是需要找资源下载，然后连接电脑导入到Kindle中，一想到这么麻烦懒癌发作的我就直接放弃了。 但是搭配<a href="https://volmoe.com/">volmoe</a>这个网站就完全不一样了。在该网站中注册账号并绑定自己的kindle邮箱后就可以通过该网站一键推送漫画到自己的kindle，方便程度堪比kindle自己的图书商城。</p><ol><li>访问<a href="https://volmoe.com/">volmoe</a>网站并注册账号登录。不知为啥，我刚开始就是Lv3的等级，每个月有3G的免费额度，我一般是够用了，不够的话可以捐助开通VIP。<br><img src= "/img/loading.gif" data-lazy-src="https://i.loli.net/2020/08/23/iUy7fq6jCb3xJwe.png" alt="volmoe001"></li><li>在推送设置中绑定自己的Kindle，完成后还需要到<a href="https://www.amazon.cn/">亚马逊</a>网站中为自己的设备添加信任邮箱，将图中的认可发件人添加进去你的kindle才能收到邮件。<br><img src= "/img/loading.gif" data-lazy-src="https://i.loli.net/2020/08/23/IFSUHmn8olTsjW2.png" alt="volmoe002"><br>登录亚马逊账号后找到管理我的内容和设备–&gt;然后找到首选项页面，拉到最下面就可以找到添加认可的电子邮件按钮。<br><img src= "/img/loading.gif" data-lazy-src="https://i.loli.net/2020/08/23/7yzeTBRfsm2drWV.png" alt="volmoe003"></li></ol><p>然后你就可以使用任意设备登录volmoe推送你想看的漫画到你的kindle了。<code>PS：可以使用kindle的浏览器访问该网站继续推送。</code></p><h2 id="RSS阅读器"><a href="#RSS阅读器" class="headerlink" title="RSS阅读器"></a>RSS阅读器</h2><p>免费的kindle的RSS推送网站实在是不赚钱，所以有很多以前很出名的网站都关闭了，比如狗耳朵。免费的目前我用过觉得还不错的是<a href="https://wheremylife.cn/">wheremylife</a>，但是目前需要打卡来增加推送次数，所以我后面就放弃没有再使用了。我现在再使用的是自己通过google云服务搭建的KindleEar服务，kindleEar是一个开源的RSS推送项目。具体的搭建过程由于时间比较久了，忘记了呜呜<del>~</del> 等我下次需要搭建的时候一定在这里加上。我目前搭建在谷歌云上的kindleEar服务只有我一个人在使用，如果有需要又懒的搭建的可以从本博客菜单栏的传送–&gt;RSS推送服务进入，需要账号可以联系博主，因为免费的谷歌云服务每天只给50MB的流量，所以尽量关闭图片的推送。</p><p>同样要在设置中设置你的kindle邮箱，然后在亚马逊网站中为自己的设备添加信任邮箱<a href="mailto:&#x76;&#x69;&#x73;&#x69;&#x62;&#x6f;&#99;&#64;&#103;&#97;&#109;&#x69;&#108;&#46;&#99;&#111;&#x6d;">&#x76;&#x69;&#x73;&#x69;&#x62;&#x6f;&#99;&#64;&#103;&#97;&#109;&#x69;&#108;&#46;&#99;&#111;&#x6d;</a>。<br><img src= "/img/loading.gif" data-lazy-src="https://i.loli.net/2020/08/23/NOElDmcbifs7op1.png" alt="kindleEar002"><br>虽然有了RSS推送服务，但是并不是每个网站都提供RSS订阅源的，这也是RSS推送服务鸡肋的原因。不过自从DIYgod大佬建立了开源的RSShub项目后就完美解决了这样的问题，Rsshub可以将任意网站制作成RSS源。·</p>]]></content>
+    <content type="html"><![CDATA[<p>#概述<br>今年三月份在拼多多上680左右购买了一台日版kindle paperwhite 4 8G，距离如今也已经有快5个月了，很庆幸还没有沦为泡面盖。在这里也顺便记录一下我食用kindle的一些方法。</p><p>#食用方法<br>kindle在我身边的定位不仅仅是一本电纸书，不然在我这儿早就吃灰了。虽然开始是抱着充实自己让自己多看书的幻想入手的，但是人终极还是敌不过懒惰，于是我就让其发挥起娱乐的作用：</p><ol><li>电纸书</li><li>漫画阅读器</li><li>RSS阅读器</li></ol><p>看上去这些功能好像都是电子阅读器最基本的功能了，有啥特殊的？<br>确实，这些功能单独使用起来都是很麻烦的，但是搭配以下的姿势就方便和强大的多了。</p><h2 id="看漫画"><a href="#看漫画" class="headerlink" title="看漫画"></a>看漫画</h2><p>看漫画最麻烦的就是需要找资源下载，然后连接电脑导入到Kindle中，一想到这么麻烦懒癌发作的我就直接放弃了。 但是搭配<a href="https://volmoe.com/">volmoe</a>这个网站就完全不一样了。在该网站中注册账号并绑定自己的kindle邮箱后就可以通过该网站一键推送漫画到自己的kindle，方便程度堪比kindle自己的图书商城。</p><ol><li>访问<a href="https://volmoe.com/">volmoe</a>网站并注册账号登录。不知为啥，我刚开始就是Lv3的等级，每个月有3G的免费额度，我一般是够用了，不够的话可以捐助开通VIP。<br><img src= "/img/loading.gif" data-lazy-src="https://i.loli.net/2020/08/23/iUy7fq6jCb3xJwe.png" alt="volmoe001"></li><li>在推送设置中绑定自己的Kindle，完成后还需要到<a href="https://www.amazon.cn/">亚马逊</a>网站中为自己的设备添加信任邮箱，将图中的认可发件人添加进去你的kindle才能收到邮件。<br><img src= "/img/loading.gif" data-lazy-src="https://i.loli.net/2020/08/23/IFSUHmn8olTsjW2.png" alt="volmoe002"><br>登录亚马逊账号后找到管理我的内容和设备–&gt;然后找到首选项页面，拉到最下面就可以找到添加认可的电子邮件按钮。<br><img src= "/img/loading.gif" data-lazy-src="https://i.loli.net/2020/08/23/7yzeTBRfsm2drWV.png" alt="volmoe003"></li></ol><p>然后你就可以使用任意设备登录volmoe推送你想看的漫画到你的kindle了。<code>PS：可以使用kindle的浏览器访问该网站继续推送。</code></p><h2 id="RSS阅读器"><a href="#RSS阅读器" class="headerlink" title="RSS阅读器"></a>RSS阅读器</h2><p>免费的kindle的RSS推送网站实在是不赚钱，所以有很多以前很出名的网站都关闭了，比如狗耳朵。免费的目前我用过觉得还不错的是<a href="https://wheremylife.cn/">wheremylife</a>，但是目前需要打卡来增加推送次数，所以我后面就放弃没有再使用了。我现在再使用的是自己通过google云服务搭建的KindleEar服务，kindleEar是一个开源的RSS推送项目。具体的搭建过程由于时间比较久了，忘记了呜呜<del>~</del> 等我下次需要搭建的时候一定在这里加上。我目前搭建在谷歌云上的kindleEar服务只有我一个人在使用，如果有需要又懒的搭建的可以从本博客菜单栏的传送–&gt;RSS推送服务进入，需要账号可以联系博主，因为免费的谷歌云服务每天只给50MB的流量，所以尽量关闭图片的推送。</p><p>同样要在设置中设置你的kindle邮箱，然后在亚马逊网站中为自己的设备添加信任邮箱<a href="mailto:&#x76;&#105;&#x73;&#105;&#98;&#x6f;&#x63;&#64;&#x67;&#x61;&#x6d;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#109;">&#x76;&#105;&#x73;&#105;&#98;&#x6f;&#x63;&#64;&#x67;&#x61;&#x6d;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#109;</a>。<br><img src= "/img/loading.gif" data-lazy-src="https://i.loli.net/2020/08/23/NOElDmcbifs7op1.png" alt="kindleEar002"><br>虽然有了RSS推送服务，但是并不是每个网站都提供RSS订阅源的，这也是RSS推送服务鸡肋的原因。不过自从DIYgod大佬建立了开源的RSShub项目后就完美解决了这样的问题，Rsshub可以将任意网站制作成RSS源。·</p>]]></content>
     
     
       
