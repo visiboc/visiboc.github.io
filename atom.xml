@@ -6,7 +6,7 @@
   <link href="https://junsmile.cc/atom.xml" rel="self"/>
   
   <link href="https://junsmile.cc/"/>
-  <updated>2021-05-25T09:00:00.000Z</updated>
+  <updated>2022-02-14T06:45:00.000Z</updated>
   <id>https://junsmile.cc/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Raspberry安装配置汇总</title>
+    <link href="https://junsmile.cc/posts/12521/"/>
+    <id>https://junsmile.cc/posts/12521/</id>
+    <published>2022-02-14T06:45:00.000Z</published>
+    <updated>2022-02-14T06:45:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1468259255&auto=1&height=66"></iframe><p>接触Raspberry已经很久了，一下是整理的内容。</p><h1 id="系统安装"><a href="#系统安装" class="headerlink" title="系统安装"></a>系统安装</h1><p>Raspberry基本可以安装目前所有的主流Linux发行版系统，但是我还是习惯使用官方的‘Raspbian’，这里指路一个树莓派实验室的<a href="https://shumeipai.nxez.com/download#os">资源导航</a>。</p><h2 id="一、无屏幕安装"><a href="#一、无屏幕安装" class="headerlink" title="一、无屏幕安装"></a>一、无屏幕安装</h2><p>树莓派在日常使用过程中经常是没有屏幕可以使用的，有时候安装的也是无屏幕的lite版本。<br>首先下载几个需要使用的工具</p><h3 id="1、下载工具"><a href="#1、下载工具" class="headerlink" title="1、下载工具"></a>1、下载工具</h3><p>镜像烧录工具<br><a href="https://sourceforge.net/projects/win32diskimager/files/Archive/">Win32DiskImager</a><br>SSH 客户端,然而我日常习惯使用Xshell<br><a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">PUTTY</a><br>SD卡格式化工具，可选（可使用win10自带的磁盘管理器格式化）<br><a href="https://www.sdcard.org/">SD Formatter for SD</a></p><p>去树莓派实验室的<a href="https://shumeipai.nxez.com/download#os">资源导航页面</a>下载好需要的系统及其版本，我目前使用了最新的raspbian 64位的lite版本。</p><h3 id="2、烧录镜像"><a href="#2、烧录镜像" class="headerlink" title="2、烧录镜像"></a>2、烧录镜像</h3><p>准备一个sd卡，如果使用的是树莓派3B+以上的版本为了ROM的读取速度也可以使用性能比较优秀的U盘来作为硬盘。<br>将sd卡用读卡器连接电脑。解压上面下载的文件，打开“Win32DiskImager”，选择“之前下载的镜像文件.img”和“目标磁盘”。（别选错了，会执行格式化）然后点击“write”写入即可，等几分钟镜像就写到sd卡上了。</p><h3 id="3、开启ssh"><a href="#3、开启ssh" class="headerlink" title="3、开启ssh"></a>3、开启ssh</h3><p>在sd卡生成的boot分区盘中创建一个名字为ssh的文件，注意该文件是没有后缀的。</p><h3 id="4、配置wifi网络"><a href="#4、配置wifi网络" class="headerlink" title="4、配置wifi网络"></a>4、配置wifi网络</h3><p>我们可以在未开机的情况下修改“/boot/wpa_supplicant.conf”来配置wifi。<br>打开“/boot/”目录。新建一个“wpa_supplicant.conf”文件，注意后缀哦，可以使用记事本打开。</p><p>写入以下代码</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">update_config=<span class="number">1</span></span><br><span class="line">ap_scan=<span class="number">1</span></span><br><span class="line">fast_reauth=<span class="number">1</span></span><br><span class="line">country=CN</span><br><span class="line">network=&#123;</span><br><span class="line">    ssid=<span class="string">&quot;要连接的WiFi1 名字&quot;</span></span><br><span class="line">    psk=<span class="string">&quot;要连接的WiFi1 密码&quot;</span></span><br><span class="line">    priority=<span class="number">5</span></span><br><span class="line">&#125;</span><br><span class="line">network=&#123;</span><br><span class="line">    ssid=<span class="string">&quot;要连接的WiFi2 名字&quot;</span></span><br><span class="line">    psk=<span class="string">&quot;要连接的WiFi2 密码&quot;</span></span><br><span class="line">    priority=<span class="number">4</span> #优先级，数字越大等级越高</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>搞定后将SD卡插入到树莓派中，通电开机。<br>通过路由器的后台就可以查看到树莓派的ip地址了。</p><p>如果没有无线网络环境的情况下可以使用网线直连电脑，连接后在网络共享中心–&gt;更改适配器设置–&gt;WLAN–&gt;属性–&gt;共享选项卡，勾选允许其他用户通过此计算机的internet连接来连接。<br>打开cmd，输入arp -a可看到树莓派的ip地址。</p><h3 id="5、SSH连接"><a href="#5、SSH连接" class="headerlink" title="5、SSH连接"></a>5、SSH连接</h3><p>废话不多说，直接打开Xsheel，输入ip地址和22端口，使用<code>默认用户名：pi 默认密码：raspberry</code>登录。</p><h2 id="二、有屏幕安装"><a href="#二、有屏幕安装" class="headerlink" title="二、有屏幕安装"></a>二、有屏幕安装</h2><p>这个就很简单，写好系统镜像，插入树莓派通电开机，接上屏幕，开干。</p><h1 id="系统初始化"><a href="#系统初始化" class="headerlink" title="系统初始化"></a>系统初始化</h1><h2 id="一、换源"><a href="#一、换源" class="headerlink" title="一、换源"></a>一、换源</h2><p>默认情况下，树莓派软件源地址是 <a href="http://archive.raspbian.org/%EF%BC%8C%E4%BD%8D%E4%BA%8E%E6%AC%A7%E6%B4%B2%EF%BC%8C%E5%9C%A8%E5%9B%BD%E5%86%85%E8%AE%BF%E9%97%AE%E6%98%AF%E9%9D%9E%E5%B8%B8%E6%85%A2%E7%9A%84%EF%BC%8C%E7%BB%8F%E5%B8%B8%E5%8F%AA%E6%9C%89%E5%87%A0">http://archive.raspbian.org/，位于欧洲，在国内访问是非常慢的，经常只有几</a> k 每秒的下载速率,有时候甚至需要通过科学上网才能快速的下载。使用我们直接把源换成国内的源就好了。</p><p>这里我们更换<a href="https://mirrors.tuna.tsinghua.edu.cn/help/raspbian/">清华源</a></p><p>树莓派默认安装的文本编辑器是“nano”，燃鹅我并不喜欢，还是我“vim”最好。虽说树莓派也安装了“vim”，但是比较诡异，可能是变异了吧，完全不符合一般人的使用逻辑。<br>首先我们要卸载“变异版vim”。<br><code>sudo apt-get remove vim-common</code><br>再重新安装“正常版vim”。<br><code>sudo apt-get install vim</code><br>接下来我们还需要配置代码高亮显示，嘛，必备的。<br>在~目录下面新建”.vimrc”文件。</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">pi@raspberrypi ~ $ cd ~</span><br><span class="line">pi@raspberrypi ~ $ vim .vimrc</span><br><span class="line"> </span><br><span class="line"><span class="built_in">set</span> number</span><br><span class="line">syntax on</span><br><span class="line"><span class="built_in">set</span> tabstop=<span class="number">4</span></span><br></pre></td></tr></table></figure><p>OK！代码高亮也配置完成。</p><p>然后开始正式换源，这里推荐一个换源工具，一键生成更新命令，再也不用手打指令啦–&gt;<a href="https://tech.biko.pub/tool#/rpi-apt-sources">树莓派软件源在线配置工具</a><br>下面是手动换源，执行<code>sudo nano /etc/apt/sources.list</code>进入编辑器<br>接着编辑这个文件，如下图所示，把原来的内容注释掉（最前面加 # 号），在文件最顶部添加下面的内容：</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">deb http:<span class="comment">//mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ buster main non-free contrib</span></span><br><span class="line">deb-src http:<span class="comment">//mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ buster main non-free contrib</span></span><br></pre></td></tr></table></figure><p>nano按 ctrl-o 保存，按 ctrl-x 关闭。<br>同样的方法，把<code>/etc/apt/sources.list.d/raspi.list</code>文件也替换成下面的内容：</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deb http:<span class="comment">//mirrors.tuna.tsinghua.edu.cn/raspberrypi/ buster main ui</span></span><br></pre></td></tr></table></figure><p>OK更换完毕。执行<code>sudo apt-get update &amp;&amp; apt-get upgrade -y</code>来更新源&amp;更新系统。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=330 height=86 src=&quot;//music.163.com/outchain/player?type=2&amp;id=1468</summary>
+      
+    
+    
+    
+    <category term="技术" scheme="https://junsmile.cc/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="Raspberry" scheme="https://junsmile.cc/tags/Raspberry/"/>
+    
+    <category term="嵌入式" scheme="https://junsmile.cc/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>对《大鱼海棠》中樁的评价</title>

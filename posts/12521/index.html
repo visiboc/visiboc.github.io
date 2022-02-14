@@ -1,0 +1,189 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Raspberry安装配置汇总 | Jun'Bolg</title><meta name="description" content="接触Raspberry已经很久了，一下是整理的内容。 系统安装Raspberry基本可以安装目前所有的主流Linux发行版系统，但是我还是习惯使用官方的‘Raspbian’，这里指路一个树莓派实验室的资源导航。 一、无屏幕安装树莓派在日常使用过程中经常是没有屏幕可以使用的，有时候安装的也是无屏幕的lite版本。首先下载几个需要使用的工具 1、下载工具镜像烧录工具Win32DiskImagerS"><meta name="keywords" content="Raspberry,嵌入式"><meta name="author" content="Jun"><meta name="copyright" content="Jun"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://junsmile.cc/posts/12521/"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta property="og:type" content="article"><meta property="og:title" content="Raspberry安装配置汇总"><meta property="og:url" content="https://junsmile.cc/posts/12521/"><meta property="og:site_name" content="Jun'Bolg"><meta property="og:description" content="接触Raspberry已经很久了，一下是整理的内容。 系统安装Raspberry基本可以安装目前所有的主流Linux发行版系统，但是我还是习惯使用官方的‘Raspbian’，这里指路一个树莓派实验室的资源导航。 一、无屏幕安装树莓派在日常使用过程中经常是没有屏幕可以使用的，有时候安装的也是无屏幕的lite版本。首先下载几个需要使用的工具 1、下载工具镜像烧录工具Win32DiskImagerS"><meta property="og:image" content="https://pic.imgdb.cn/item/60acc27508f74bc1599b5c0b.jpg"><meta property="article:published_time" content="2022-02-14T06:45:00.000Z"><meta property="article:modified_time" content="2022-02-14T06:45:00.000Z"><meta name="twitter:card" content="summary"><script>var activateDarkMode = function () {
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#000')
+  }
+}
+var activateLightMode = function () {
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#fff')
+  }
+}
+
+var getCookies = function (name) {
+  const value = `; ${document.cookie}`
+  const parts = value.split(`; ${name}=`)
+  if (parts.length === 2) return parts.pop().split(';').shift()
+}
+
+var autoChangeMode = 'false'
+var t = getCookies('theme')
+if (autoChangeMode === '1') {
+  var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  var isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+  var isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined) {
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport) {
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour <= 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+    }
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+      if (Cookies.get('theme') === undefined) {
+        e.matches ? activateDarkMode() : activateLightMode()
+      }
+    })
+  } else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else if (autoChangeMode === '2') {
+  now = new Date()
+  hour = now.getHours()
+  isNight = hour <= 6 || hour >= 18
+  if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else {
+  if (t === 'dark') activateDarkMode()
+  else if (t === 'light') activateLightMode()
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  hexoversion: '5.0.2',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天',
+  runtime: true,
+  copyright: undefined,
+  ClickShowText: undefined,
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  baiduPush: false,
+  highlightCopy: true,
+  highlightLang: true,
+  isPhotoFigcaption: true,
+  islazyload: true,
+  isanchor: false    
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isSidebar: true,
+  postUpdate: '2022-02-14 14:45:00'
+}</script><noscript><style>
+#nav {
+  opacity: 1
+}
+.justified-gallery img {
+  opacity: 1
+}
+</style></noscript><link rel="stylesheet" href="/css/footfish.css"><link rel="stylesheet" href="/css/gdt.css"><meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/atom.xml" title="Jun'Bolg" type="application/atom+xml">
+</head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" data-lazy-src="https://pic1.superbed.cn/item/5df73e0c76085c3289d6bd99.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">9</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">16</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">4</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 图库</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 爱好</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page" href="/books/"><i class="fa-fw fas fa-book"></i><span> 书架</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 追番</span></a></li><li><a class="site-page" href="/games/"><i class="fa-fw fas fa-gamepad"></i><span> 游戏</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-rocket"></i><span> 传送</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="https://fontawesome.dashgame.com/"><i class="fa-fw fas fa-icons"></i><span> 图标支持</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://kindle.junsmile.cc"><i class="fa-fw fas fa-rss-square"></i><span> RSS推送服务</span></a></li></ul></div></div></div></div><div id="body-wrap"><div id="sidebar"><i class="fas fa-arrow-right on" id="toggle-sidebar"></i><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85"><span class="toc-number">1.</span> <span class="toc-text">系统安装</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%97%A0%E5%B1%8F%E5%B9%95%E5%AE%89%E8%A3%85"><span class="toc-number">1.1.</span> <span class="toc-text">一、无屏幕安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E4%B8%8B%E8%BD%BD%E5%B7%A5%E5%85%B7"><span class="toc-number">1.1.1.</span> <span class="toc-text">1、下载工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E7%83%A7%E5%BD%95%E9%95%9C%E5%83%8F"><span class="toc-number">1.1.2.</span> <span class="toc-text">2、烧录镜像</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E5%BC%80%E5%90%AFssh"><span class="toc-number">1.1.3.</span> <span class="toc-text">3、开启ssh</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E9%85%8D%E7%BD%AEwifi%E7%BD%91%E7%BB%9C"><span class="toc-number">1.1.4.</span> <span class="toc-text">4、配置wifi网络</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81SSH%E8%BF%9E%E6%8E%A5"><span class="toc-number">1.1.5.</span> <span class="toc-text">5、SSH连接</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E6%9C%89%E5%B1%8F%E5%B9%95%E5%AE%89%E8%A3%85"><span class="toc-number">1.2.</span> <span class="toc-text">二、有屏幕安装</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-number">2.</span> <span class="toc-text">系统初始化</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%8D%A2%E6%BA%90"><span class="toc-number">2.1.</span> <span class="toc-text">一、换源</span></a></li></ol></li></ol></div></div></div><header class="post-bg" id="page-header" style="background-image: url(https://pic.imgdb.cn/item/60acc27508f74bc1599b5c0b.jpg)"><nav id="nav"><span class="pull-left" id="blog_name"><a class="blog_title" id="site-name" href="/">Jun'Bolg</a></span><span class="pull-right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 图库</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 爱好</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page" href="/books/"><i class="fa-fw fas fa-book"></i><span> 书架</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 追番</span></a></li><li><a class="site-page" href="/games/"><i class="fa-fw fas fa-gamepad"></i><span> 游戏</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-rocket"></i><span> 传送</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="https://fontawesome.dashgame.com/"><i class="fa-fw fas fa-icons"></i><span> 图标支持</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://kindle.junsmile.cc"><i class="fa-fw fas fa-rss-square"></i><span> RSS推送服务</span></a></li></ul></div></div><span class="toggle-menu close"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><div id="post-title"><div class="posttitle">Raspberry安装配置汇总</div></div><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-02-14T06:45:00.000Z" title="发表于 2022-02-14 14:45:00">2022-02-14</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-02-14T06:45:00.000Z" title="更新于 2022-02-14 14:45:00">2022-02-14</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a></span></div><div class="meta-secondline"> <span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.2k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>3分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout_post" id="content-inner"><article id="post"><div class="post-content" id="article-container"><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1468259255&auto=1&height=66"></iframe>
+
+<p>接触Raspberry已经很久了，一下是整理的内容。</p>
+<h1 id="系统安装"><a href="#系统安装" class="headerlink" title="系统安装"></a>系统安装</h1><p>Raspberry基本可以安装目前所有的主流Linux发行版系统，但是我还是习惯使用官方的‘Raspbian’，这里指路一个树莓派实验室的<a target="_blank" rel="noopener" href="https://shumeipai.nxez.com/download#os">资源导航</a>。</p>
+<h2 id="一、无屏幕安装"><a href="#一、无屏幕安装" class="headerlink" title="一、无屏幕安装"></a>一、无屏幕安装</h2><p>树莓派在日常使用过程中经常是没有屏幕可以使用的，有时候安装的也是无屏幕的lite版本。<br>首先下载几个需要使用的工具</p>
+<h3 id="1、下载工具"><a href="#1、下载工具" class="headerlink" title="1、下载工具"></a>1、下载工具</h3><p>镜像烧录工具<br><a target="_blank" rel="noopener" href="https://sourceforge.net/projects/win32diskimager/files/Archive/">Win32DiskImager</a><br>SSH 客户端,然而我日常习惯使用Xshell<br><a target="_blank" rel="noopener" href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">PUTTY</a><br>SD卡格式化工具，可选（可使用win10自带的磁盘管理器格式化）<br><a target="_blank" rel="noopener" href="https://www.sdcard.org/">SD Formatter for SD</a></p>
+<p>去树莓派实验室的<a target="_blank" rel="noopener" href="https://shumeipai.nxez.com/download#os">资源导航页面</a>下载好需要的系统及其版本，我目前使用了最新的raspbian 64位的lite版本。</p>
+<h3 id="2、烧录镜像"><a href="#2、烧录镜像" class="headerlink" title="2、烧录镜像"></a>2、烧录镜像</h3><p>准备一个sd卡，如果使用的是树莓派3B+以上的版本为了ROM的读取速度也可以使用性能比较优秀的U盘来作为硬盘。<br>将sd卡用读卡器连接电脑。解压上面下载的文件，打开“Win32DiskImager”，选择“之前下载的镜像文件.img”和“目标磁盘”。（别选错了，会执行格式化）然后点击“write”写入即可，等几分钟镜像就写到sd卡上了。</p>
+<h3 id="3、开启ssh"><a href="#3、开启ssh" class="headerlink" title="3、开启ssh"></a>3、开启ssh</h3><p>在sd卡生成的boot分区盘中创建一个名字为ssh的文件，注意该文件是没有后缀的。</p>
+<h3 id="4、配置wifi网络"><a href="#4、配置wifi网络" class="headerlink" title="4、配置wifi网络"></a>4、配置wifi网络</h3><p>我们可以在未开机的情况下修改“/boot/wpa_supplicant.conf”来配置wifi。<br>打开“/boot/”目录。新建一个“wpa_supplicant.conf”文件，注意后缀哦，可以使用记事本打开。</p>
+<p>写入以下代码</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">update_config=<span class="number">1</span></span><br><span class="line">ap_scan=<span class="number">1</span></span><br><span class="line">fast_reauth=<span class="number">1</span></span><br><span class="line">country=CN</span><br><span class="line">network=&#123;</span><br><span class="line">    ssid=<span class="string">&quot;要连接的WiFi1 名字&quot;</span></span><br><span class="line">    psk=<span class="string">&quot;要连接的WiFi1 密码&quot;</span></span><br><span class="line">    priority=<span class="number">5</span></span><br><span class="line">&#125;</span><br><span class="line">network=&#123;</span><br><span class="line">    ssid=<span class="string">&quot;要连接的WiFi2 名字&quot;</span></span><br><span class="line">    psk=<span class="string">&quot;要连接的WiFi2 密码&quot;</span></span><br><span class="line">    priority=<span class="number">4</span> #优先级，数字越大等级越高</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>搞定后将SD卡插入到树莓派中，通电开机。<br>通过路由器的后台就可以查看到树莓派的ip地址了。</p>
+<p>如果没有无线网络环境的情况下可以使用网线直连电脑，连接后在网络共享中心–&gt;更改适配器设置–&gt;WLAN–&gt;属性–&gt;共享选项卡，勾选允许其他用户通过此计算机的internet连接来连接。<br>打开cmd，输入arp -a可看到树莓派的ip地址。</p>
+<h3 id="5、SSH连接"><a href="#5、SSH连接" class="headerlink" title="5、SSH连接"></a>5、SSH连接</h3><p>废话不多说，直接打开Xsheel，输入ip地址和22端口，使用<code>默认用户名：pi 默认密码：raspberry</code>登录。</p>
+<h2 id="二、有屏幕安装"><a href="#二、有屏幕安装" class="headerlink" title="二、有屏幕安装"></a>二、有屏幕安装</h2><p>这个就很简单，写好系统镜像，插入树莓派通电开机，接上屏幕，开干。</p>
+<h1 id="系统初始化"><a href="#系统初始化" class="headerlink" title="系统初始化"></a>系统初始化</h1><h2 id="一、换源"><a href="#一、换源" class="headerlink" title="一、换源"></a>一、换源</h2><p>默认情况下，树莓派软件源地址是 <a target="_blank" rel="noopener" href="http://archive.raspbian.org/%EF%BC%8C%E4%BD%8D%E4%BA%8E%E6%AC%A7%E6%B4%B2%EF%BC%8C%E5%9C%A8%E5%9B%BD%E5%86%85%E8%AE%BF%E9%97%AE%E6%98%AF%E9%9D%9E%E5%B8%B8%E6%85%A2%E7%9A%84%EF%BC%8C%E7%BB%8F%E5%B8%B8%E5%8F%AA%E6%9C%89%E5%87%A0">http://archive.raspbian.org/，位于欧洲，在国内访问是非常慢的，经常只有几</a> k 每秒的下载速率,有时候甚至需要通过科学上网才能快速的下载。使用我们直接把源换成国内的源就好了。</p>
+<p>这里我们更换<a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/help/raspbian/">清华源</a></p>
+<p>树莓派默认安装的文本编辑器是“nano”，燃鹅我并不喜欢，还是我“vim”最好。虽说树莓派也安装了“vim”，但是比较诡异，可能是变异了吧，完全不符合一般人的使用逻辑。<br>首先我们要卸载“变异版vim”。<br><code>sudo apt-get remove vim-common</code><br>再重新安装“正常版vim”。<br><code>sudo apt-get install vim</code><br>接下来我们还需要配置代码高亮显示，嘛，必备的。<br>在~目录下面新建”.vimrc”文件。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">pi@raspberrypi ~ $ cd ~</span><br><span class="line">pi@raspberrypi ~ $ vim .vimrc</span><br><span class="line"> </span><br><span class="line"><span class="built_in">set</span> number</span><br><span class="line">syntax on</span><br><span class="line"><span class="built_in">set</span> tabstop=<span class="number">4</span></span><br></pre></td></tr></table></figure>
+<p>OK！代码高亮也配置完成。</p>
+<p>然后开始正式换源，这里推荐一个换源工具，一键生成更新命令，再也不用手打指令啦–&gt;<a target="_blank" rel="noopener" href="https://tech.biko.pub/tool#/rpi-apt-sources">树莓派软件源在线配置工具</a><br>下面是手动换源，执行<code>sudo nano /etc/apt/sources.list</code>进入编辑器<br>接着编辑这个文件，如下图所示，把原来的内容注释掉（最前面加 # 号），在文件最顶部添加下面的内容：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">deb http:<span class="comment">//mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ buster main non-free contrib</span></span><br><span class="line">deb-src http:<span class="comment">//mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ buster main non-free contrib</span></span><br></pre></td></tr></table></figure>
+<p>nano按 ctrl-o 保存，按 ctrl-x 关闭。<br>同样的方法，把<code>/etc/apt/sources.list.d/raspi.list</code>文件也替换成下面的内容：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deb http:<span class="comment">//mirrors.tuna.tsinghua.edu.cn/raspberrypi/ buster main ui</span></span><br></pre></td></tr></table></figure>
+<p>OK更换完毕。执行<code>sudo apt-get update &amp;&amp; apt-get upgrade -y</code>来更新源&amp;更新系统。</p>
+</div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Jun</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://junsmile.cc/posts/12521/">https://junsmile.cc/posts/12521/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://junsmile.cc" target="_blank">Jun'Bolg</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Raspberry/">Raspberry</a><a class="post-meta__tags" href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/">嵌入式</a></div><div class="post_share"><div class="social-share" data-image="https://pic.imgdb.cn/item/60acc27508f74bc1599b5c0b.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/posts/12520/"><img class="next-cover" data-lazy-src="https://pic.imgdb.cn/item/60acc27508f74bc1599b5c0b.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">对《大鱼海棠》中樁的评价</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="gitalk-container"></div></div></div></div></article></main><footer id="footer" style="background-image: url(https://pic.imgdb.cn/item/60acc27508f74bc1599b5c0b.jpg)" data-type="photo"><div id="footer-wrap"><div class="copyright">&copy;2014 - 2022 By Jun</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to  <a href="https://junsmile.cc/">Jun'blog</a>!</div></div></footer></div><section id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="font_plus" type="button" title="放大字体"><i class="fas fa-plus"></i></button><button id="font_minus" type="button" title="缩小字体"><i class="fas fa-minus"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></section><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js" async></script><div class="js-pjax"><script>if (document.getElementsByClassName('mermaid').length) {
+  if (window.mermaidJsLoad) mermaid.init()
+  else {
+    $.getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js', function () {
+      window.mermaidJsLoad = true
+      mermaid.initialize({
+        theme: 'default',
+      })
+      false && mermaid.init()
+    })
+  }
+}</script><script>function addGitalkSource () {
+  const ele = document.createElement('link')
+  ele.rel = 'stylesheet'
+  ele.href= 'https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css'
+  document.getElementsByTagName('head')[0].appendChild(ele)
+}
+
+function loadGitalk () {
+  function initGitalk () {
+    var gitalk = new Gitalk({
+      clientID: '4e2d0af7fbf5d78bc623',
+      clientSecret: 'ff7516467f24452774f374af592cf401df5cc653',
+      repo: 'visiboc.github.io',
+      owner: 'visiboc',
+      admin: ['visiboc'],
+      id: '50be1f517c14200f7286a278e647fdb5',
+      language: 'zh-CN',
+      perPage: 10,
+      distractionFreeMode: false,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      updateCountCallback: commentCount
+    })
+    gitalk.render('gitalk-container')
+  }
+
+  if (typeof Gitalk === 'function') initGitalk()
+  else {
+    addGitalkSource()
+    $.getScript('https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js', initGitalk)
+  }
+}
+
+function commentCount(n){
+  let isCommentCount = document.querySelector('#post-meta .gitalk-comment-count')
+  if (isCommentCount) {
+    isCommentCount.innerHTML= n
+  }
+}
+
+if ('Gitalk' === 'Gitalk' || !false) {
+  if (false) loadComment(document.getElementById('gitalk-container'), loadGitalk)
+  else loadGitalk()
+} else {
+  function loadOtherComment () {
+    loadGitalk()
+  }
+}</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="https://cdn.jsdelivr.net/gh/xiabo2/CDN@latest/fishes.js"></script><canvas class="fireworks"></canvas><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="/js/third-party/fireworks.js"></script><script defer="defer" id="ribbon" src="/js/third-party/canvas-ribbon.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="true"></script><script src="/js/third-party/activate-power-mode.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+document.body.addEventListener('input', POWERMODE);
+</script></div></body></html>
