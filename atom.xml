@@ -6,7 +6,7 @@
   <link href="https://junsmile.cc/atom.xml" rel="self"/>
   
   <link href="https://junsmile.cc/"/>
-  <updated>2022-02-16T06:45:00.000Z</updated>
+  <updated>2022-12-22T16:00:00.000Z</updated>
   <id>https://junsmile.cc/</id>
   
   <author>
@@ -15,6 +15,60 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>LFS(Linux From Scratch)学习记录</title>
+    <link href="https://junsmile.cc/posts/12528/"/>
+    <id>https://junsmile.cc/posts/12528/</id>
+    <published>2022-12-22T16:00:00.000Z</published>
+    <updated>2022-12-22T16:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><p>LFS(Linux From Scratch)它不是一个现成的Linux系统，需要从零编译构建出一个系统来，所以这个构建的过程肯定需要在一个合适的宿主主机中来进行，既然是构建Linux系统，那最好的宿主主机当然是Linux。在Linux发行版中我最喜欢的是Debian和arch，Debian是一个完全基于开源代码的发行版，作为自由软件的拥趸，那必须选择debian。</p><h2 id="宿主主机"><a href="#宿主主机" class="headerlink" title="宿主主机"></a>宿主主机</h2><p>新安装了Debian环境，在安装软件的时候报错Media change: please insert the disc labeled，这是由于Debian的软件源中存在如下配置，即通过DVD光盘来安装软件。</p><p>vi /etc/apt/sources.list</p><p>将带有cdrom的源注释掉，然后更新apt update</p><p>在root账号下，执行如下命令安装sudo。</p><p>apt install sudo -y<br>添加你的本地用户到 sudo 组，可以使用 usermod 命令，如下：<br>usermod -aG sudo linux265</p><p>进行系统更新<br>sudo apt update<br>sudo apt upgrade -y</p><p>sudo apt install xorg<br>sudo apt install xserver-xorg-core</p><p>apt install i3 zsh vim sakura lightdm ttf-wqy-zenhei<br>i3 是窗口管理器，里面包含了i3-wm,i3lock和i3status</p><p>包括 i3-wm、i3lock、i3status、dunst 和 suckless-tools。</p><p>最小化i3   apt install i3 –no-install-recommends</p><p>sakura 是terminal<br>lightdm 是登录管理器<br>ttf-wqy-zenhei 是字体</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;准备工作&quot;&gt;&lt;a href=&quot;#准备工作&quot; class=&quot;headerlink&quot; title=&quot;准备工作&quot;&gt;&lt;/a&gt;准备工作&lt;/h1&gt;&lt;p&gt;LFS(Linux From Scratch)它不是一个现成的Linux系统，需要从零编译构建出一个系统来，所以这个构建的过</summary>
+      
+    
+    
+    
+    <category term="技术" scheme="https://junsmile.cc/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="Linux" scheme="https://junsmile.cc/tags/Linux/"/>
+    
+    <category term="内核编译" scheme="https://junsmile.cc/tags/%E5%86%85%E6%A0%B8%E7%BC%96%E8%AF%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>🐏了个🐏</title>
+    <link href="https://junsmile.cc/posts/12529/"/>
+    <id>https://junsmile.cc/posts/12529/</id>
+    <published>2022-12-19T16:00:00.000Z</published>
+    <updated>2022-12-26T16:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="COVID-19核酸检测阳性"><a href="#COVID-19核酸检测阳性" class="headerlink" title="COVID-19核酸检测阳性"></a>COVID-19核酸检测阳性</h2><p>看身边同事好像一个个都不来上班了，起初还觉得有点奇怪，觉得自己短时间应该还不会变阳。但是第二天就发现我做的核酸混管结果显示为待复核，因为暂时还没有任何的症状所以也没当个事，会宿舍时发现室友好像已经倒下了。这个时间已经发现好像有点不妙了。所以就和领导说了一下现在的情况问领导我明天还要不要去上班，因为我工作的房间其他人还没有听说确诊阳性，领导让我明天先别去上班了。<br>第二天一早我就去附近的核酸点去做了单管核酸，此时我还没有发烧等症状，不过嗓子时有点痒的，我当时我工作的时候吹风吹的。结果当天到晚上结果都没有出来，我心想坏了，这下怕不是阳了，因为一般当天不出结果基本就是有问题的情况，果不其然，第二天结果出来了是阳性。</p><h2 id="第一阶段"><a href="#第一阶段" class="headerlink" title="第一阶段"></a>第一阶段</h2><p>我感染时间应该是比较长了，因为我室友躺在床上哼哼唧唧的时候我虽然还没有任何的症状，但是估计已经感染了。可能经过了几天的发展，这天晚上快十二点的时候发现不对劲了，头有点晕，身上也感觉很滚烫很难受，感觉自己此时可能已经开始发烧了。</p><h2 id="第二阶段"><a href="#第二阶段" class="headerlink" title="第二阶段"></a>第二阶段</h2><p>这是开始发烧的第一天，也是最最难熬的一天。简直痛不欲生，谁说的小感冒，你过来！我保证不打死你！！浑身酸痛，感觉被卡车撞了一般的难受，身上忽冷忽热，头痛欲裂，连眼睛都很疼，淦！！</p><h2 id="第三阶段"><a href="#第三阶段" class="headerlink" title="第三阶段"></a>第三阶段</h2><p>我开始发烧的第二天，我感觉我好像好了，啥事也没有了，早上起来身上不疼了，也不发烧了，开心坏了，以为我身体天赋异禀，结果下午又开始接着难受接着发烧，痛苦ing。</p><h2 id="第四阶段"><a href="#第四阶段" class="headerlink" title="第四阶段"></a>第四阶段</h2><p>经过了一周的休息，现在已经不会发烧了，就是咳嗽，还有感觉身体特别的虚弱，出去拿个快递都觉得虚的不行，还是继续好好休息吧，身体要紧。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;COVID-19核酸检测阳性&quot;&gt;&lt;a href=&quot;#COVID-19核酸检测阳性&quot; class=&quot;headerlink&quot; title=&quot;COVID-19核酸检测阳性&quot;&gt;&lt;/a&gt;COVID-19核酸检测阳性&lt;/h2&gt;&lt;p&gt;看身边同事好像一个个都不来上班了，起初还觉得</summary>
+      
+    
+    
+    
+    <category term="记录生活" scheme="https://junsmile.cc/categories/%E8%AE%B0%E5%BD%95%E7%94%9F%E6%B4%BB/"/>
+    
+    
+    <category term="COVID-19" scheme="https://junsmile.cc/tags/COVID-19/"/>
+    
+    <category term="健康" scheme="https://junsmile.cc/tags/%E5%81%A5%E5%BA%B7/"/>
+    
+    <category term="生活" scheme="https://junsmile.cc/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+  </entry>
   
   <entry>
     <title>Raspberry安装配置汇总</title>
@@ -103,13 +157,12 @@
     <published>2020-08-23T02:43:00.000Z</published>
     <updated>2020-08-23T02:43:00.000Z</updated>
     
-    <content type="html"><![CDATA[<p>#概述<br>今年三月份在拼多多上680左右购买了一台日版kindle paperwhite 4 8G，距离如今也已经有快5个月了，很庆幸还没有沦为泡面盖。在这里也顺便记录一下我食用kindle的一些方法。</p><p>#食用方法<br>kindle在我身边的定位不仅仅是一本电纸书，不然在我这儿早就吃灰了。虽然开始是抱着充实自己让自己多看书的幻想入手的，但是人终极还是敌不过懒惰，于是我就让其发挥起娱乐的作用：</p><ol><li>电纸书</li><li>漫画阅读器</li><li>RSS阅读器</li></ol><p>看上去这些功能好像都是电子阅读器最基本的功能了，有啥特殊的？<br>确实，这些功能单独使用起来都是很麻烦的，但是搭配以下的姿势就方便和强大的多了。</p><h2 id="看漫画"><a href="#看漫画" class="headerlink" title="看漫画"></a>看漫画</h2><p>看漫画最麻烦的就是需要找资源下载，然后连接电脑导入到Kindle中，一想到这么麻烦懒癌发作的我就直接放弃了。 但是搭配<a href="https://volmoe.com/">volmoe</a>这个网站就完全不一样了。在该网站中注册账号并绑定自己的kindle邮箱后就可以通过该网站一键推送漫画到自己的kindle，方便程度堪比kindle自己的图书商城。</p><ol><li>访问<a href="https://volmoe.com/">volmoe</a>网站并注册账号登录。不知为啥，我刚开始就是Lv3的等级，每个月有3G的免费额度，我一般是够用了，不够的话可以捐助开通VIP。<br><img src= "/img/loading.gif" data-lazy-src="https://i.loli.net/2020/08/23/iUy7fq6jCb3xJwe.png" alt="volmoe001"></li><li>在推送设置中绑定自己的Kindle，完成后还需要到<a href="https://www.amazon.cn/">亚马逊</a>网站中为自己的设备添加信任邮箱，将图中的认可发件人添加进去你的kindle才能收到邮件。<br><img src= "/img/loading.gif" data-lazy-src="https://i.loli.net/2020/08/23/IFSUHmn8olTsjW2.png" alt="volmoe002"><br>登录亚马逊账号后找到管理我的内容和设备–&gt;然后找到首选项页面，拉到最下面就可以找到添加认可的电子邮件按钮。<br><img src= "/img/loading.gif" data-lazy-src="https://i.loli.net/2020/08/23/7yzeTBRfsm2drWV.png" alt="volmoe003"></li></ol><p>然后你就可以使用任意设备登录volmoe推送你想看的漫画到你的kindle了。<code>PS：可以使用kindle的浏览器访问该网站继续推送。</code></p><h2 id="RSS阅读器"><a href="#RSS阅读器" class="headerlink" title="RSS阅读器"></a>RSS阅读器</h2><p>免费的kindle的RSS推送网站实在是不赚钱，所以有很多以前很出名的网站都关闭了，比如狗耳朵。免费的目前我用过觉得还不错的是<a href="https://wheremylife.cn/">wheremylife</a>，但是目前需要打卡来增加推送次数，所以我后面就放弃没有再使用了。我现在再使用的是自己通过google云服务搭建的KindleEar服务，kindleEar是一个开源的RSS推送项目。具体的搭建过程由于时间比较久了，忘记了呜呜<del>~</del> 等我下次需要搭建的时候一定在这里加上。我目前搭建在谷歌云上的kindleEar服务只有我一个人在使用，如果有需要又懒的搭建的可以从本博客菜单栏的传送–&gt;RSS推送服务进入，需要账号可以联系博主，因为免费的谷歌云服务每天只给50MB的流量，所以尽量关闭图片的推送。</p><p>同样要在设置中设置你的kindle邮箱，然后在亚马逊网站中为自己的设备添加信任邮箱<a href="mailto:&#x76;&#x69;&#115;&#105;&#98;&#111;&#99;&#x40;&#103;&#97;&#x6d;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;">&#x76;&#x69;&#115;&#105;&#98;&#111;&#99;&#x40;&#103;&#97;&#x6d;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;</a>。<br><img src= "/img/loading.gif" data-lazy-src="https://i.loli.net/2020/08/23/NOElDmcbifs7op1.png" alt="kindleEar002"><br>虽然有了RSS推送服务，但是并不是每个网站都提供RSS订阅源的，这也是RSS推送服务鸡肋的原因。不过自从DIYgod大佬建立了开源的RSShub项目后就完美解决了这样的问题，Rsshub可以将任意网站制作成RSS源。·</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>今年三月份在拼多多上680左右购买了一台日版kindle paperwhite 4 8G，距离如今也已经有快5个月了，很庆幸还没有沦为泡面盖。在这里也顺便记录一下我食用kindle的一些方法。</p><h1 id="食用方法"><a href="#食用方法" class="headerlink" title="食用方法"></a>食用方法</h1><p>kindle在我身边的定位不仅仅是一本电纸书，不然在我这儿早就吃灰了。虽然开始是抱着充实自己让自己多看书的幻想入手的，但是人终极还是敌不过懒惰，于是我就让其发挥起娱乐的作用：</p><ol><li>电纸书</li><li>漫画阅读器</li><li>RSS阅读器</li></ol><p>看上去这些功能好像都是电子阅读器最基本的功能了，有啥特殊的？<br>确实，这些功能单独使用起来都是很麻烦的，但是搭配以下的姿势就方便和强大的多了。</p><h2 id="看漫画"><a href="#看漫画" class="headerlink" title="看漫画"></a>看漫画</h2><p>看漫画最麻烦的就是需要找资源下载，然后连接电脑导入到Kindle中，一想到这么麻烦懒癌发作的我就直接放弃了。 但是搭配<a href="https://volmoe.com/">volmoe</a>这个网站就完全不一样了。在该网站中注册账号并绑定自己的kindle邮箱后就可以通过该网站一键推送漫画到自己的kindle，方便程度堪比kindle自己的图书商城。</p><ol><li>访问<a href="https://volmoe.com/">volmoe</a>网站并注册账号登录。不知为啥，我刚开始就是Lv3的等级，每个月有3G的免费额度，我一般是够用了，不够的话可以捐助开通VIP。<br><img src= "/img/loading.gif" data-lazy-src="https://i.loli.net/2020/08/23/iUy7fq6jCb3xJwe.png" alt="volmoe001"></li><li>在推送设置中绑定自己的Kindle，完成后还需要到<a href="https://www.amazon.cn/">亚马逊</a>网站中为自己的设备添加信任邮箱，将图中的认可发件人添加进去你的kindle才能收到邮件。<br><img src= "/img/loading.gif" data-lazy-src="https://i.loli.net/2020/08/23/IFSUHmn8olTsjW2.png" alt="volmoe002"><br>登录亚马逊账号后找到管理我的内容和设备–&gt;然后找到首选项页面，拉到最下面就可以找到添加认可的电子邮件按钮。<br><img src= "/img/loading.gif" data-lazy-src="https://i.loli.net/2020/08/23/7yzeTBRfsm2drWV.png" alt="volmoe003"></li></ol><p>然后你就可以使用任意设备登录volmoe推送你想看的漫画到你的kindle了。<code>PS：可以使用kindle的浏览器访问该网站继续推送。</code></p><h2 id="RSS阅读器"><a href="#RSS阅读器" class="headerlink" title="RSS阅读器"></a>RSS阅读器</h2><p>免费的kindle的RSS推送网站实在是不赚钱，所以有很多以前很出名的网站都关闭了，比如狗耳朵。免费的目前我用过觉得还不错的是<a href="https://wheremylife.cn/">wheremylife</a>，但是目前需要打卡来增加推送次数，所以我后面就放弃没有再使用了。我现在再使用的是自己通过google云服务搭建的KindleEar服务，kindleEar是一个开源的RSS推送项目。具体的搭建过程由于时间比较久了，忘记了呜呜<del>~</del> 等我下次需要搭建的时候一定在这里加上。我目前搭建在谷歌云上的kindleEar服务只有我一个人在使用，如果有需要又懒的搭建的可以从本博客菜单栏的传送–&gt;RSS推送服务进入，需要账号可以联系博主，因为免费的谷歌云服务每天只给50MB的流量，所以尽量关闭图片的推送。</p><p>同样要在设置中设置你的kindle邮箱，然后在亚马逊网站中为自己的设备添加信任邮箱<a href="mailto:&#x76;&#105;&#x73;&#105;&#x62;&#x6f;&#x63;&#x40;&#x67;&#97;&#x6d;&#105;&#x6c;&#x2e;&#99;&#x6f;&#x6d;">&#x76;&#105;&#x73;&#105;&#x62;&#x6f;&#x63;&#x40;&#x67;&#97;&#x6d;&#105;&#x6c;&#x2e;&#99;&#x6f;&#x6d;</a>。<br><img src= "/img/loading.gif" data-lazy-src="https://i.loli.net/2020/08/23/NOElDmcbifs7op1.png" alt="kindleEar002"><br>虽然有了RSS推送服务，但是并不是每个网站都提供RSS订阅源的，这也是RSS推送服务鸡肋的原因。不过自从DIYgod大佬建立了开源的RSShub项目后就完美解决了这样的问题，Rsshub可以将任意网站制作成RSS源。·</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;#概述&lt;br&gt;今年三月份在拼多多上680左右购买了一台日版kindle paperwhite 4 8G，距离如今也已经有快5个月了，很庆幸还没有沦为泡面盖。在这里也顺便记录一下我食用kindle的一些方法。&lt;/p&gt;
-&lt;p&gt;#食用方法&lt;br&gt;kindle在我身边的定位不仅仅是</summary>
+    <summary type="html">&lt;h1 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h1&gt;&lt;p&gt;今年三月份在拼多多上680左右购买了一台日版kindle paperwhite 4 8G，距离如今也已经有快5个月了，很庆幸还没有沦为泡面盖</summary>
       
     
     
@@ -212,12 +265,12 @@
     <published>2019-12-22T14:16:01.000Z</published>
     <updated>2019-12-22T14:16:01.000Z</updated>
     
-    <content type="html"><![CDATA[<p>#梦开始的地方<br>第一次接触blog，应该是我高三的时候，从小在农村长大，接触电脑的机会比较少，小时候亲戚给了我一些互联网和电脑方面的杂志，所以经常看这这些杂志就想着我要是有一台电脑多好，这也导致我对电脑技术本身的兴趣高于电脑游戏。高三的时候刚好有机会能接触到电脑，学习辣鸡的我就时常偷摸着折腾电脑。然后就开始回想起在些现在看来<del>古董</del>般的杂志上的内容，第一次有了搭建bolg的想法。</p><p>#折腾经历<br>作为一个不会代码的咸鱼，自己写是不可能的了，不过我解到了wordpress，第一次搭建博客是从淘宝上买是主机空间，然后在万网上买了个好像是top的域名，几块钱来着。花了一些时间照着找来的教程磕磕碰碰也算是成功搭建了。然后就是找各种主题，折腾了好一阵子，才配置了一个满意的，不过后来并没有写bolg，只是一时兴起。</p><p>上大学后把以前的bolg删了，自己买了VPS开始搭建，用的还是wordpress，一段时间后又删了，开始尝试各种不同的博客系统，可能只是喜欢折腾的过程吧。随着新鲜劲过了，发现还是让别人了来管理服务器比较好，所以选择了hexo博客系统。以前写的一些垃圾博文也没啥用，也就不搬了吧，就这样吧。</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="梦开始的地方"><a href="#梦开始的地方" class="headerlink" title="梦开始的地方"></a>梦开始的地方</h1><p>第一次接触blog，应该是我高三的时候，从小在农村长大，接触电脑的机会比较少，小时候亲戚给了我一些互联网和电脑方面的杂志，所以经常看这这些杂志就想着我要是有一台电脑多好，这也导致我对电脑技术本身的兴趣高于电脑游戏。高三的时候刚好有机会能接触到电脑，学习辣鸡的我就时常偷摸着折腾电脑。然后就开始回想起在些现在看来<del>古董</del>般的杂志上的内容，第一次有了搭建bolg的想法。</p><h1 id="折腾经历"><a href="#折腾经历" class="headerlink" title="折腾经历"></a>折腾经历</h1><p>作为一个不会代码的咸鱼，自己写是不可能的了，不过我解到了wordpress，第一次搭建博客是从淘宝上买是主机空间，然后在万网上买了个好像是top的域名，几块钱来着。花了一些时间照着找来的教程磕磕碰碰也算是成功搭建了。然后就是找各种主题，折腾了好一阵子，才配置了一个满意的，不过后来并没有写bolg，只是一时兴起。</p><p>上大学后把以前的bolg删了，自己买了VPS开始搭建，用的还是wordpress，一段时间后又删了，开始尝试各种不同的博客系统，可能只是喜欢折腾的过程吧。随着新鲜劲过了，发现还是让别人了来管理服务器比较好，所以选择了hexo博客系统。以前写的一些垃圾博文也没啥用，也就不搬了吧，就这样吧。</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;#梦开始的地方&lt;br&gt;第一次接触blog，应该是我高三的时候，从小在农村长大，接触电脑的机会比较少，小时候亲戚给了我一些互联网和电脑方面的杂志，所以经常看这这些杂志就想着我要是有一台电脑多好，这也导致我对电脑技术本身的兴趣高于电脑游戏。高三的时候刚好有机会能接触到电脑，学习</summary>
+    <summary type="html">&lt;h1 id=&quot;梦开始的地方&quot;&gt;&lt;a href=&quot;#梦开始的地方&quot; class=&quot;headerlink&quot; title=&quot;梦开始的地方&quot;&gt;&lt;/a&gt;梦开始的地方&lt;/h1&gt;&lt;p&gt;第一次接触blog，应该是我高三的时候，从小在农村长大，接触电脑的机会比较少，小时候亲戚给了我一些互联网和电</summary>
       
     
     
